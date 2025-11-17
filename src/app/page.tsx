@@ -76,15 +76,16 @@ export default function Home() {
           + Создать свой проект
         </button>
 
-        {/* Временная кнопка для отладки */}
+        {/* Временная кнопка для отладки 
         <div>
-          {/* <button
+          <button
             onClick={handleClearProjects}
             className="bg-gray-500 text-white px-4 py-2 rounded text-sm hover:bg-gray-600"
           >
             Очистить проекты
-          </button> */}
+          </button>
         </div>
+        */}
       </div>
 
       {projects.length !== 0 && (
