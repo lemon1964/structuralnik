@@ -1,0 +1,11 @@
+# metro-front/.gitignore
+/.next/
+/out/
+/node_modules
+next-env.d.ts
+.env.local
+.DS_Store
+.idea/
+.vscode/
+.venv/
+venv/
