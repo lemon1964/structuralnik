@@ -46,13 +46,13 @@ export default function Home() {
     }
   };
 
-  const handleClearProjects = () => {
-    if (confirm("Очистить все пользовательские проекты?")) {
-      sessionStorage.removeItem("structural-user-projects");
-      setProjects([]);
-      alert("Проекты очищены");
-    }
-  };
+  // const handleClearProjects = () => {
+  //   if (confirm("Очистить все пользовательские проекты?")) {
+  //     sessionStorage.removeItem("structural-user-projects");
+  //     setProjects([]);
+  //     alert("Проекты очищены");
+  //   }
+  // };
 
   return (
     <main className="p-8 bg-gradient-to-r from-purple-100 via-white to-indigo-100 min-h-screen">
@@ -78,12 +78,12 @@ export default function Home() {
 
         {/* Временная кнопка для отладки */}
         <div>
-          <button
+          {/* <button
             onClick={handleClearProjects}
             className="bg-gray-500 text-white px-4 py-2 rounded text-sm hover:bg-gray-600"
           >
             Очистить проекты
-          </button>
+          </button> */}
         </div>
       </div>
 
