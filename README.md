@@ -119,8 +119,8 @@ MIT
 ## 👤 Автор
 
 **Ваше Имя**
-- Telegram: [@yourusername](https://t.me/Lemon1964)
-- GitHub: [@yourusername](https://github.com/lemon1964/structuralnik.git)
+- Telegram: [@Lemon1964](https://t.me/Lemon1964)
+- GitHub: [@lemon1964](https://github.com/lemon1964/structuralnik.git)
 
 ## 🙏 Благодарности
 
