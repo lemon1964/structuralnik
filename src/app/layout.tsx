@@ -45,6 +45,24 @@ export const metadata: Metadata = {
     description: "Конструктор для структурирования проектов",
     images: ['/images/og-image.webp'],
   },
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: false,
+    follow: false,
+    // index: true,
+    // follow: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      // index: true,
+      // follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 
