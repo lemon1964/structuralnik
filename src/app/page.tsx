@@ -111,6 +111,10 @@ export default function Home() {
           </div>
         </div>
       )}
+      <p className="text-gray-500 text-center mt-1 text-xs">
+        ⚠️ В тестовой версии ваши проекты сохраняются только в этой вкладке браузера. Если закроете
+        вкладку — данные очистятся.
+      </p>
       <p className="text-gray-600 text-center mt-2 text-sm">
         Начните структурировать свои идеи и проекты
       </p>
