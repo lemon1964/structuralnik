@@ -2,8 +2,8 @@
 name: Ping Render
 
 on:
-#   schedule:
-#     - cron: '*/12 5-22 * * *'  # Каждые 12 минут с 05:00 до 22:59 UTC
+  schedule:
+    - cron: '*/10 5-22 * * *'  # Каждые 10 минут с 05:00 до 22:59 UTC
   workflow_dispatch:  # Ручной запуск
 
 jobs:
