@@ -1,0 +1,95 @@
+// src/app/layout.tsx
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import Link from 'next/link'
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: "Структурник - конструктор для структурирования проектов",
+  description: "Минималистичный инструмент для организации проектов, идей и решений. Создавайте структуру сложных задач за минуты.",
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+  },
+  keywords: ["проекты", "структурирование", "организация", "идеи", "планирование"],
+  openGraph: {
+    title: "🗂 Структурник",
+    description: "Конструктор для структурирования проектов и сложных задач",
+    url: siteUrl,
+    siteName: "Структурник",
+    images: [
+      {
+        url: '/images/og-image.webp',
+        // url: '/api/og', // или '/images/og-image.webp' если загрузишь файл
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "🗂 Структурник",
+    description: "Конструктор для структурирования проектов",
+    images: ['/images/og-image.webp'],
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: false,
+    follow: false,
+    // index: true,
+    // follow: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      // index: true,
+      // follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="ru">
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      {/* <body> */}
+        <nav className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between h-16">
+              <div className="flex items-center">
+                <Link href="/" className="flex items-center space-x-2">
+                  <span className="text-2xl">🗂</span>
+                  <span className="font-bold text-xl text-gray-900">Структурник</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </nav>
+        {children}
+      </body>
+    </html>
+  )
+}
+
